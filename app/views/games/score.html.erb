@@ -1,0 +1,14 @@
+
+<div class="container mt-5">
+  <div class="row d-flex justify-content-center">
+    <div class="col-sm-12 col-lg-4">
+      <p class="fw-bold">Your guess : <%= params[:games]%></p>
+      <p><%= @message%></p>
+      <p> La grille: <%= @letters %></p>
+
+      <button type="button" class="btn btn-info"><%= link_to 'Try again', new_path %></button>
+
+
+    </div>
+  </div>
+</div>

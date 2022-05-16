@@ -1,0 +1,19 @@
+
+<div class="container mt-5">
+  <div class="row d-flex justify-content-center border border-info rounded">
+    <div class="col-md-6 col-lg-4">
+      <h2>New Game</h2>
+
+      La grille : <% @letters.each do |letter| %>
+        <%= letter %>
+      <% end %>
+    <form action="/score" method="post" data-turbo="false">
+      <label for="games">Your guess :</label>
+      <input type="text" name="games" class="mt-3">
+      <input type="submit" value="Play">
+      <%= hidden_field_tag :letters, @letters %>
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    </form>
+    </div>
+  </div>
+</div>
